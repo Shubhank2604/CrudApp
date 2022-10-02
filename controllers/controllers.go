@@ -32,7 +32,7 @@ func CreateUser(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var user [](a.User)
 	json.NewDecoder(r.Body).Decode(&user)
-	fmt.Println("h1")
+	fmt.Println("h2")
 	a.DB.Create(&user)
 	fmt.Println("h2")
 	json.NewEncoder(w).Encode(user)
